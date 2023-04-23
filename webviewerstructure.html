@@ -11,10 +11,11 @@
         <script src="webviewerlogic.js"></script>
     </head>
     <body>
-    <!-- Viewer container -->
     <div id="viewer">
             <button class="viewer-buttons settings">
                 <img class="image" src="Settings.svg" alt="Settings">
+                <!-- This displays text when mouse is hovered over an image,
+                disabled as it is not currently in use -->
                 <!--<span class="button-text">Settings</span>-->
             </button>
             <div id="settings-dropdown">
@@ -82,8 +83,6 @@
             </div>
             <button class="viewer-buttons upload">
                 <img class="image" src="Upload.svg" alt="Upload">
-                <!-- This displays text when mouse is hovered over an image,
-                disabled as it is not currently in use -->
                 <!--<span class="button-text">Upload</span>-->
             </button>
             <button class="viewer-buttons help">
@@ -95,14 +94,5 @@
             </button>
         </div>
         <canvas id="kvas"></canvas>
-        <!-- Container with addons -->
-        <!--<div id="addons-cont">
-            <p class="addons-text">IN COLLECTIONS</p>
-            <div class="addons one"></div>
-            <div class="addons two"></div>
-            <div class="addons three"></div>
-            <p class="addons-text">SUGGESTED 3D MODELS</p>
-            <div class="addons four"></div>
-        </div>-->
     </body>
 </html>
