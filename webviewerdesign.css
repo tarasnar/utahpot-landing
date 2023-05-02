@@ -116,7 +116,7 @@ body {
     position: absolute;
     z-index: 1;
     border-radius: 4px;
-    margin-top: 48px;
+    margin-top: 47px;
     margin-left: 10px;
 }
 
@@ -138,6 +138,39 @@ body {
     font-size: 12px;
     color: white;
     padding-left: 5px;
+}
+
+#textures {
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    background-color: dimgrey;
+}
+
+#navigation {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    background-color: dimgrey;
+}
+
+#textures-list {
+    display: none;
+    position: relative;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+#navigation-list {
+    display: none;
+    position: relative;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
 }
 
 #focal-length {
@@ -173,7 +206,7 @@ body {
     position: absolute;
     z-index: 1;
     border-radius: 4px;
-    margin-top: 48px;
+    margin-top: 47px;
     margin-left: 10px;
     padding-bottom: 10px;
 }

@@ -20,7 +20,12 @@
             </button>
             <div id="settings-dropdown">
                 <h1>Settings</h1>
-                <p>Textures</p>
+                <button id="textures">Textures</button><br>
+                <div id="textures-list">
+                    <p>Option 1</p>
+                    <p>Option 2</p>
+                    <p>Option 3</p>
+                </div>
                 <span class="settings-buttons">
                     <label>Focal Length</label>
                     <input id="focal-length" type="number" value="focal" min="0" max="100">
@@ -28,8 +33,12 @@
                 <span class="settings-buttons">
                     <label>FPS</label>
                     <input id="fps" type="checkbox" value="fps">
-                </span>
-                <p>Navigation</p>
+                </span><br>
+                <button id="navigation">Navigation</button>
+                <div id="navigation-list">
+                    <p>Option 1</p>
+                    <p>Option 2</p>
+                </div>
             </div>
             <button class="viewer-buttons inspector">
                 <img class="image" src="Inspector.svg" alt="Inspector">
