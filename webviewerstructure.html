@@ -7,101 +7,139 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="webviewerdesign.css">
         <script src="webviewerlogic.js"></script>
     </head>
     <body>
-    <div id="viewer">
-            <button class="viewer-buttons settings">
-                <img class="image" src="Settings.svg" alt="Settings">
-                <!-- This displays text when mouse is hovered over an image,
-                disabled as it is not currently in use -->
-                <!--<span class="button-text">Settings</span>-->
-            </button>
-            <div id="settings-dropdown">
-                <h1>Settings</h1>
-                <button id="textures">Textures</button><br>
-                <div id="textures-list">
-                    <p>Option 1</p>
-                    <p>Option 2</p>
-                    <p>Option 3</p>
-                </div>
-                <span class="settings-buttons">
-                    <label>Focal Length</label>
-                    <input id="focal-length" type="number" value="focal" min="0" max="100">
-                </span><br>
-                <span class="settings-buttons">
-                    <label>FPS</label>
-                    <input id="fps" type="checkbox" value="fps">
-                </span><br>
-                <button id="navigation">Navigation</button>
-                <div id="navigation-list">
-                    <p>Option 1</p>
-                    <p>Option 2</p>
-                </div>
-            </div>
-            <button class="viewer-buttons inspector">
-                <img class="image" src="Inspector.svg" alt="Inspector">
-                <!--<span class="button-text">Inspector</span>-->
-            </button>
-            <div id="inspector-dropdown">
-                <h1>Inspector</h1>
-                <h2>Regime</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="clickable">
-                    <label>Clickable</label>
-                </span><br>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="clickable">
-                    <label>Clickable optional</label>
-                </span>
-                <h2>Render</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="final">
-                    <label>Final Render</label>
-                </span>
-                <h2>Albedo</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="albedo">
-                    <label>Albedo</label>
-                </span>
-                <h2>Rafnes</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="rafnes">
-                    <label>Rafnes</label>
-                </span>
-                <h2>Geometry</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="matcap">
-                    <label>Matcap</label>
-                </span>
-                <h2>Normals</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="normals">
-                    <label>Active</label>
-                </span>
-                <h2>Options</h2>
-                <span class="regime-buttons">
-                    <input class="insp-check" type="checkbox" value="mesh">
-                    <label>Model Mesh</label>
-                </span><br>
-                <span class="regime-buttons options">
-                    <input class="insp-check" type="checkbox" value="vertex">
-                    <label>Vertex Normals</label>
-                </span>
-            </div>
-            <button class="viewer-buttons upload">
-                <img class="image" src="Upload.svg" alt="Upload">
-                <!--<span class="button-text">Upload</span>-->
-            </button>
-            <button class="viewer-buttons help">
-                <img class="image" src="Help.svg" alt="Help">
-                <!--<span class="button-text">Help</span>-->
-            </button>
-            <button id="fullscreen">
-                <img class="image full" src="Fullscreen.svg" alt="Fullscreen">
-            </button>
+        <div class="nav-menu">
+            <a class="nav-links intr" href="#intro-one">INTRO</a>
+            <a class="nav-links abt" href="#page-one">ABOUT</a>
+            <a class="nav-links vwr" href="#page-two">VIEWER</a>
+            <p class="utahpot">UTAHPOT</p>
         </div>
-        <canvas id="kvas"></canvas>
+        <div id="intro-one">
+            <p>UTAHPOT</p>
+            <a href="#page-one">SKIP INTRO</a>
+        </div>
+        <div class="intro two">
+            <p>JS LIBRARY</p>
+            <p>TO WORK WITH GPU</p>
+            <p>WITH SPEED OF RUST</p>
+            <p>AND CONVENIENCE OF THREEJS</p>
+        </div>
+        <div class="intro three">
+            <p>WEBGPU BASED</p>
+            <p>PARALLEL STREAMS CAPABLE</p>
+            <p>10 TIMES MORE EFFICIENT</p>
+        </div>
+        <div class="intro four">
+            <p>UNCOMPROMISING</p>
+            <p>GRAPHICS</p>
+            <p>IN YOUR</p>
+            <p>BROWSER</p>
+        </div>
+        <div id="page-one" class="page-one">
+        </div>
+        <div class="page-one extend">
+        </div>
+        <div id="page-two">
+            <p id="poc">OUR POC - 3D MODEL VIEWER</p>
+            <div id="viewer">
+                <button class="viewer-buttons settings">
+                    <img class="image" src="Settings.svg" alt="Settings">
+                </button>
+                <div id="settings-dropdown">
+                    <h1>Settings</h1>
+                    <button id="textures">Textures</button><br>
+                    <div id="textures-list">
+                        <p>Option 1</p>
+                        <p>Option 2</p>
+                        <p>Option 3</p>
+                    </div>
+                    <span class="settings-buttons">
+                        <label>Focal Length</label>
+                        <input id="focal-length" type="number" value="focal" min="0" max="100">
+                    </span><br>
+                     <span class="settings-buttons">
+                        <label>FPS</label>
+                        <input id="fps" type="checkbox" value="fps">
+                    </span><br>
+                    <button id="navigation">Navigation</button>
+                    <div id="navigation-list">
+                        <p>Option 1</p>
+                        <p>Option 2</p>
+                    </div>
+                </div>
+                <button class="viewer-buttons inspector">
+                    <img class="image" src="Inspector.svg" alt="Inspector">
+                </button>
+                <div id="inspector-dropdown">
+                    <h1>Inspector</h1>
+                    <h2>Regime</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="clickable">
+                        <label>Clickable</label>
+                    </span><br>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="clickable">
+                        <label>Clickable optional</label>
+                    </span>
+                    <h2>Render</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="final">
+                        <label>Final Render</label>
+                    </span>
+                    <h2>Albedo</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="albedo">
+                        <label>Albedo</label>
+                    </span>
+                    <h2>Rafnes</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="rafnes">
+                        <label>Rafnes</label>
+                    </span>
+                    <h2>Geometry</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="matcap">
+                        <label>Matcap</label>
+                    </span>
+                    <h2>Normals</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="normals">
+                        <label>Active</label>
+                    </span>
+                    <h2>Options</h2>
+                    <span class="regime-buttons">
+                        <input class="insp-check" type="checkbox" value="mesh">
+                        <label>Model Mesh</label>
+                    </span><br>
+                    <span class="regime-buttons options">
+                        <input class="insp-check" type="checkbox" value="vertex">
+                        <label>Vertex Normals</label>
+                    </span>
+                </div>
+                <button class="viewer-buttons upload">
+                    <img class="image" src="Upload.svg" alt="Upload">
+                </button>
+                <button class="viewer-buttons help">
+                    <img class="image" src="Help.svg" alt="Help">
+                </button>
+                <button id="fullscreen">
+                    <img class="image full" src="Fullscreen.svg" alt="Fullscreen">
+                </button>
+            </div>
+            <canvas id="kvas"></canvas>
+            <p id="pre">PRE LAUNCH - FALL 2023</p>
+        </div>
+        <footer>
+            <p>CONTACT US</p>
+            <a href="https://telegram.org/" target="_blank"><img src="telegram.svg" alt="Telegram"></a>
+            <a href="https://github.com/saerafi" target="_blank"><img src="github.svg" alt="GitHub"></a>
+            <a href="https://www.reddit.com/r/Utahpot/" target="_blank"><img src="reddit.svg" alt="Reddit"></a>
+            <a href="https://linkedin.com/" target="_blank"><img src="linkedin.svg" alt="GitHub Logo"></a>
+            <p id="credential">@UTAHPOT 2023.</p>
+        </footer>
     </body>
 </html>
