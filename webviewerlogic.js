@@ -1,156 +1,66 @@
-function logic () {
-    // Initialize objects needed for buttons logic
-    const settingsBtn = document.querySelector('.settings');
-    const fullBtn = document.getElementById('fullscreen');
-    const inspButton = document.querySelector('.inspector');
-    const setDropdown = document.getElementById('settings-dropdown');
-    const inspDropdown = document.getElementById('inspector-dropdown');
-    const viewerCont = document.getElementById('viewer');
-    const canvasCont = document.getElementById('kvas');
-    const btnImage = document.querySelector('.full');
-    const pgTwo = document.getElementById('page-two');
-    const texturesBtn = document.getElementById('textures');
-    const texturesDropdown = document.getElementById('textures-list');
-    const navigationBtn = document.getElementById('navigation');
-    const navigationDropdown = document.getElementById('navigation-list');
+window.onload = function () {
+    // Initialise lax.js library for parallax animations
+    lax.init()
 
-    setDropdown.style.display = 'none';
-    // When options clicked
-    settingsBtn.addEventListener('click', function () {
-        // If menu not displayed, display it
-        if (setDropdown.style.display === 'none') {
-            setDropdown.style.display = 'block';
-            inspDropdown.style.display = 'none';
-            // If displayed, close menu
+    lax.addDriver('scrollY', function () {
+        return window.scrollY
+    })
+
+    const fullscreenImage = document.querySelector('.full');
+    const pageOne = document.querySelector('.page-one');
+    const pageTwo = document.getElementById('page-two');
+    const viewerContainer = document.getElementById('viewer');
+
+    $('.help-popup').hide();
+    $('.help').click(function() {
+        if ($('.help-popup').css('display') == 'none') {
+            $('.help-popup').show();
         } else {
-            setDropdown.style.display = 'none';
+            $('.help-popup').hide();
         }
     });
 
-    inspDropdown.style.display = 'none';
-    // When inspector clicked
-    inspButton.addEventListener('click', function () {
-        if (inspDropdown.style.display === 'none') {
-            inspDropdown.style.display = 'block';
-            setDropdown.style.display = 'none'
-        } else {
-            inspDropdown.style.display = 'none';
-        }
-    });
-
-    viewerCont.style.height = '64%';
-    viewerCont.style.width = '52%';
-    // When fullscreen clicked
-    fullBtn.addEventListener('click', function () {
-        // If viewer not in full screen scale it
-        if (viewerCont.style.height === '64%' && viewerCont.style.width === '52%') {
-            pgTwo.requestFullscreen();
-            viewerCont.style.height = '100%';
-            viewerCont.style.width = '100%';
-            canvasCont.style.height = '100%';
-            canvasCont.style.width = '100%';
-            viewerCont.style.borderRadius = '0px';
-            canvasCont.style.borderRadius = '0px';
-            btnImage.src = 'ScreenDownsize.svg';
-            inspDropdown.style.display = 'none';
-            setDropdown.style.display = 'none';
+    $('#viewer, #kvas').css('height', '64vh');
+    $('#viewer, #kvas').css('width', '52vw');
+    // On fullscreen click
+    $('#fullscreen').click(function () {
+        // Scale to fullscreen
+        if (viewerContainer.style.height === '64vh' && viewerContainer.style.width === '52vw') {
+            pageTwo.requestFullscreen();
+            $('#viewer, #kvas').css('height', '100vh');
+            $('#viewer, #kvas').css('width', '100vw');
+            $('#viewer, #kvas').css('border-radius', '0px');
+            fullscreenImage.src = 'images/ScreenDownsize.svg';
             // Resize back to normal
         } else {
             document.exitFullscreen();
-            viewerCont.style.height = '64%';
-            viewerCont.style.width = '52%';
-            canvasCont.style.height = '64%';
-            canvasCont.style.width = '52%';
-            viewerCont.style.borderRadius = '10px';
-            canvasCont.style.borderRadius = '10px'
-            btnImage.src = 'Fullscreen.svg';
-            inspDropdown.style.display = 'none';
-            setDropdown.style.display = 'none';
+            $('#viewer, #kvas').css('height', '64vh');
+            $('#viewer, #kvas').css('width', '52vw');
+            $('#viewer, #kvas').css('border-radius', '10px');
+            fullscreenImage.src = 'images/Fullscreen.svg';
         }
     });
 
-    texturesDropdown.style.display = 'none';
-    // When textures button clicked
-    texturesBtn.addEventListener('click', function () {
-        // If textures list not displayed, display
-        if (texturesDropdown.style.display === 'none') {
-            texturesDropdown.style.display = 'block';
-        } else {
-            texturesDropdown.style.display = 'none';
-        }
-    });
-    navigationDropdown.style.display = 'none';
-    // When navigation button clicked
-    navigationBtn.addEventListener('click', function () {
-        // If navigation list not displayed, display
-        if (navigationDropdown.style.display === 'none') {
-            navigationDropdown.style.display = 'block';
-        } else {
-            navigationDropdown.style.display = 'none';
-        }
-    });
-
-    // When scrolling page, make menu dynamic
+    $('.nav-menu').hide();
+    // Navigation menu behaviour when scrolling page
     window.addEventListener('scroll', function() {
         // Initialize objects needed
-        const navMenu = document.querySelector('.nav-menu');
-        const pageOne = document.querySelector('.page-one');
-        const navPot = document.querySelector('.utahpot');
-        const navIntr = document.querySelector(".intr");
-        const navAbt = document.querySelector(".abt");
-        const navVwr = document.querySelector(".vwr");
         const scrollPosition = window.scrollY;
-        // If we are after the introduction pages
+        // Show after intro
         if (scrollPosition >= pageOne.offsetHeight * 4) {
-            navMenu.style.display = 'flex';
-            navMenu.style.position = 'fixed';
-            // If we are after the introduction pages but before viewer page
+            $('.nav-menu').show();
+            // Style for about page
             if (scrollPosition >= pageOne.offsetHeight * 4 && scrollPosition < pageOne.offsetHeight * 6) {
-                navPot.style.color = 'black';
-                navIntr.style.color = 'black';
-                navAbt.style.color = 'black';
-                navVwr.style.color = 'black';
-                navMenu.style.borderColor = 'black';
-            // If we are at the viewer page, change color of menu
+                $('.utahpot, .intr, .abt, .vwr').css('color', 'black');
+                $('.nav-menu').css('border-color','black');
+                // Style for viewer page
             } else {
-                navPot.style.color = 'white';
-                navIntr.style.color = 'white';
-                navAbt.style.color = 'white';
-                navVwr.style.color = 'white';
-                navMenu.style.borderColor = '#D5D5D5';
+                $('.utahpot, .intr, .abt, .vwr').css('color', 'white');
+                $('.nav-menu').css('border-color','#D5D5D5');
             }
-        // If we are at introduction hide menu
+            // Hide on intro
         } else {
-            navMenu.style.display = 'none';
-            navMenu.style.position = 'relative';
+            $('.nav-menu').hide();
         }
     });
-
-    // If element is in viewport, add class with animation
-    function handleIntersection(entries, observer) {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                // Unobserve element
-                observer.unobserve(entry.target);
-            }
-        });
-    }
-
-    // Parameters for observation
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-    };
-
-    // Define the observer and elements to observe
-    const observer = new IntersectionObserver(handleIntersection, options);
-    const elements = document.querySelectorAll(".intro p");
-
-    elements.forEach((element) => {
-        observer.observe(element);
-    });
 }
-
-window.onload = logic;
