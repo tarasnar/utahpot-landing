@@ -1,8 +1,8 @@
-window.onload = function () {
+window.onload = () => {
     // Initialise lax.js library for parallax animations
     lax.init()
 
-    lax.addDriver('scrollY', function () {
+    lax.addDriver('scrollY', () => {
         return window.scrollY
     })
 
@@ -12,7 +12,7 @@ window.onload = function () {
     const viewerContainer = document.getElementById('viewer');
 
     $('.help-popup').hide();
-    $('.help').click(function() {
+    $('.help').click(() => {
         if ($('.help-popup').css('display') == 'none') {
             $('.help-popup').show();
         } else {
@@ -23,7 +23,7 @@ window.onload = function () {
     $('#viewer, #kvas').css('height', '64vh');
     $('#viewer, #kvas').css('width', '52vw');
     // On fullscreen click
-    $('#fullscreen').click(function () {
+    $('#fullscreen').click(() => {
         // Scale to fullscreen
         if (viewerContainer.style.height === '64vh' && viewerContainer.style.width === '52vw') {
             pageTwo.requestFullscreen();
@@ -43,7 +43,7 @@ window.onload = function () {
 
     $('.nav-menu').hide();
     // Navigation menu behaviour when scrolling page
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', () => {
         // Initialize objects needed
         const scrollPosition = window.scrollY;
         // Show after intro
