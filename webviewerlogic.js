@@ -56,7 +56,7 @@ window.onload = () => {
                 // Style for viewer page
             } else {
                 $('.utahpot, .intr, .abt, .vwr').css('color', 'white');
-                $('.nav-menu').css('border-color','#D5D5D5');
+                $('.nav-menu').css('border-color','white');
             }
             // Hide on intro
         } else {
