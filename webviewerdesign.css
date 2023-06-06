@@ -264,7 +264,13 @@ footer a {
     font-size: 2vw;
 }
 
-.about-image {
+.image-question {
+    height: 10vw;
+    width: 10vw;
+}
+
+.image-gpu {
     height: 13vw;
     width: 13vw;
 }
+
