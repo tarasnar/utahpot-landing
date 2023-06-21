@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#poc {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3vw;
+    margin-bottom: auto;
+    padding: 4vw 0 0 0;
+}
+
+#pre {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3vw;
+    margin-top: auto;
+    padding: 0 0 4vw 0;
+}
+
+.intro {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#intro-one {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+#intro-one p {
+    color: white;
+    font-size: 25vw;
+}
+
+#intro-one a {
+    color: white;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-size: 8vw;
+    color: white;
+}
+
+.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-size: 8vw;
+    color: white;
+}
+
+.four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-size: 8vw;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    position: fixed;
+    color: white;
+    background-color: transparent;
+    height: 100vh;
+    width: 8vw;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    border-right: 1px solid #D5D5D5;
+    transition: border-color 1s ease-out;
+}
+
+.utahpot {
+    background-color: transparent;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5vw;
+    display: inline;
+    border: none;
+    transform: rotate(-90deg);
+    transition: color 1s ease-out;
+}
+
+.intr, .abt, .vwr {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    display: inline;
+    transition: color 1s ease-out;
+}
+
+
+.page-one {
+    height: 100vh;
+    width: 100vw;
+    background-color: #D5D5D5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+#page-two {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#viewer {
+    display: flex;
+    height: 64vh;
+    width: 52vw;
+    background-color: #B7B7B7;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#kvas {
+    height: 64vh;
+    width: 52vw;
+    background-color: #B7B7B7;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.viewer-buttons {
+    background-color: transparent;
+    margin: .5vw 0 0 .5vw;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    z-index: 9999;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.viewer-buttons:hover {
+    transition: background-color;
+    transition-duration: 0.3s;
+    background-color: rgba(69, 69, 69, .5);
+}
+
+#fullscreen {
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    align-self: flex-end;
+    margin-bottom: .5vw;
+    margin-right: .5vw;
+    margin-left: auto;
+    z-index: 9999;
+}
+
+#fullscreen:hover {
+    transition: background-color;
+    transition-duration: 0.3s;
+    background-color: rgba(69, 69, 69, .5);
+}
+
+.full {
+    height: 30px;
+    width: 30px;
+}
+
+footer {
+    height: auto;
+    width: 100vw;
+    background-color: black;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3vw;
+    padding: 1vw .5vw 0 .5vw;
+}
+
+footer a {
+    background-color: transparent;
+    border: none;
+    padding: .5vw;
+    display: inline-flex;
+}
+
+#credential {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5vw;
+    padding: .5vw;
+}
+
+.help-popup {
+    display: block;
+    height: auto;
+    width: 40vw;
+    position: absolute;
+    background-color: rgba(69, 69, 69, .5);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+    border-radius: 4px;
+    align-self: flex-start;
+    z-index: 9999;
+    padding: .5vw;
+    margin: calc(35px + 1vw) 0 0 .5vw;
+}
+
+.about-container {
+    height: auto;
+    width: calc(256px + 50vw);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.about-text {
+    height: auto;
+    width: auto;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 2vw 0 2vw;
+}
+
+.about-text h1 {
+    font-size: 2vw;
+}
+
+.image-question {
+    height: 10vw;
+    width: 10vw;
+}
+
+.image-gpu {
+    height: 13vw;
+    width: 13vw;
+}
+
