@@ -13,7 +13,7 @@ window.onload = () => {
 
     $('.help-popup').hide();
     $('.help').click(() => {
-        if ($('.help-popup').css('display') == 'none') {
+        if ($('.help-popup').css('display') === 'none') {
             $('.help-popup').show();
         } else {
             $('.help-popup').hide();
