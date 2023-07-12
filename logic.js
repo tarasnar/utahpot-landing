@@ -1,10 +1,10 @@
 window.onload = () => {
     // Initialise lax.js library for parallax animations
-    lax.init()
+    lax.init();
 
     lax.addDriver('scrollY', () => {
         return window.scrollY
-    })
+    });
 
     const fullscreenImage = document.querySelector('.full');
     const pageOne = document.querySelector('.page-one');
@@ -30,14 +30,14 @@ window.onload = () => {
             $('#viewer, #kvas').css('height', '100vh');
             $('#viewer, #kvas').css('width', '100vw');
             $('#viewer, #kvas').css('border-radius', '0px');
-            fullscreenImage.src = 'images/ScreenDownsize.svg';
+            fullscreenImage.src = 'ScreenDownsize.svg';
             // Resize back to normal
         } else {
             document.exitFullscreen();
             $('#viewer, #kvas').css('height', '64vh');
             $('#viewer, #kvas').css('width', '52vw');
             $('#viewer, #kvas').css('border-radius', '10px');
-            fullscreenImage.src = 'images/Fullscreen.svg';
+            fullscreenImage.src = 'Fullscreen.svg';
         }
     });
 

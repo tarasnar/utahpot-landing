@@ -1,10 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 #poc {
@@ -25,14 +22,15 @@ body {
 
 .intro {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     background-color: black;
     font-family: 'Bebas Neue', sans-serif;
+    overflow-x: clip;
 }
 
 #intro-one {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     background-color: black;
     font-family: 'Bebas Neue', sans-serif;
     display: flex;
@@ -118,7 +116,7 @@ body {
 
 .page-one {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     background-color: #D5D5D5;
     display: flex;
     justify-content: space-evenly;
@@ -128,7 +126,7 @@ body {
 
 #page-two {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     background-color: black;
     display: flex;
     flex-flow: column nowrap;
@@ -202,7 +200,7 @@ body {
 
 footer {
     height: auto;
-    width: 100vw;
+    width: auto;
     background-color: black;
     text-align: center;
 }
