@@ -41,26 +41,26 @@ window.onload = () => {
         }
     });
 
-    $('.nav-menu').hide();
+    $('.nav-div').hide();
     // Navigation menu behaviour when scrolling page
     window.addEventListener('scroll', () => {
         // Initialize objects needed
         const scrollPosition = window.scrollY;
         // Show after intro
         if (scrollPosition >= pageOne.offsetHeight * 4) {
-            $('.nav-menu').show();
+            $('.nav-div').show();
             // Style for about page
             if (scrollPosition >= pageOne.offsetHeight * 4 && scrollPosition < pageOne.offsetHeight * 6) {
-                $('.utahpot, .intr, .abt, .vwr').css('color', 'black');
-                $('.nav-menu').css('border-color','black');
+                $('.menu-links, #menu-name').css('color', 'black');
+                $('.nav-div').css('border-color','black');
                 // Style for viewer page
             } else {
-                $('.utahpot, .intr, .abt, .vwr').css('color', 'white');
-                $('.nav-menu').css('border-color','white');
+                $('.menu-links, #menu-name').css('color', 'white');
+                $('.nav-div').css('border-color','white');
             }
             // Hide on intro
         } else {
-            $('.nav-menu').hide();
+            $('.nav-div').hide();
         }
     });
 }

@@ -68,7 +68,7 @@
         margin: calc(35px + 1vw) 0 0 .5vw;
     }
 
-    .nav-menu {
+    .nav-div {
         display: flex;
         position: fixed;
         color: white;
@@ -81,26 +81,30 @@
         align-content: center;
         border-right: 1px solid #D5D5D5;
         transition: border-color 1s ease-out;
-    }
-
-    .utahpot {
-        background-color: transparent;
-        color: white;
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 1.5vw;
-        display: inline;
-        border: none;
+    }
+    .nav-div ul {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
         transform: rotate(-90deg);
+    }
+    .nav-div ul li {
+        display: inline;
+        padding: 0 2.5vw;
+        font-size: 1.5vw;
+    }
+    .nav-div ul li a {
+        text-decoration: none;
+        color: white;
         transition: color 1s ease-out;
     }
-
-    .intr, .abt, .vwr {
-        color: white;
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 1.5vw;
-        text-decoration: none;
+    .nav-div p {
         transform: rotate(-90deg);
-        display: inline;
+        font-size: 1.5vw;
+        padding: 0 10.5vw 0 0;
         transition: color 1s ease-out;
     }
 
