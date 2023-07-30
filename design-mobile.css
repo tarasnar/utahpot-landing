@@ -68,6 +68,16 @@
         margin: calc(35px + 1vh) 0 0 .5vh;
     }
 
+    #help-ok {
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1vw;
+        padding: .5vh .5vh 0 .5vh;
+    }
+
     .nav-div {
         display: flex;
         position: fixed;

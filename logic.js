@@ -11,12 +11,11 @@ window.onload = () => {
     const pageTwo = document.getElementById('page-two');
     const viewerContainer = document.getElementById('viewer');
 
-    $('.help-popup').hide();
-    $('.help').click(() => {
-        if ($('.help-popup').css('display') === 'none') {
-            $('.help-popup').show();
-        } else {
-            $('.help-popup').hide();
+    $('.help, #help-ok').click(() => {
+            if ($('.help-popup').css('display') === 'block') {
+                $('.help-popup').hide();
+            } else {
+                $('.help-popup').show();
         }
     });
 
